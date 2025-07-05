@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Detector de Sentimientos</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.16.0"></script>
+    <script src="script.js" defer></script>
+    <style>
+        body {
+            background-color: #121212;
+            color: #f5f5f5;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #00ffc8;
+        }
+
+        textarea {
+            width: 90%;
+            max-width: 500px;
+            height: 100px;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            background-color: #1e1e1e;
+            color: #ffffff;
+            font-size: 16px;
+            resize: none;
+            outline: none;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0, 255, 200, 0.3);
+        }
+
+        button {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            background-color: #00ffc8;
+            color: #121212;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        button:hover {
+            background-color: #00c9a7;
+            transform: scale(1.05);
+        }
+
+        .resultado {
+            margin-top: 25px;
+            font-size: 1.2em;
+            text-align: center;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Detector de Sentimientos</h1>
+    <textarea id="texto" placeholder="Escribe tu frase aquí..."></textarea>
+    <button onclick="analizar()">Analizar Sentimiento</button>
+    <div class="resultado" id="resultado"></div>
+</body>
+</html>
